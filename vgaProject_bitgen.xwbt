@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\vgaProject.ncd
+OUTFILE=C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\vgaProject.bit
+FAMILY=Artix7
+PART=xc7a100t-1csg324
+WORKINGDIR=C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final
+LICENSE=WebPack
+USER_INFO=211268733_0_0_054

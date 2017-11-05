@@ -1,0 +1,1261 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: vgaProject.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "vgaProject.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "vgaProject"
+Output Format                      : NGC
+Target Device                      : xc7a100t-1-csg324
+
+---- Source Options
+Top Module Name                    : vgaProject
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\maxpool.v" into library work
+Parsing module <maxpool>.
+Analyzing Verilog file "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\Filter.v" into library work
+Parsing module <Filter>.
+Analyzing Verilog file "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\convolution.v" into library work
+Parsing module <convolution>.
+Analyzing Verilog file "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\address_l2.v" into library work
+Parsing module <address_l2>.
+Analyzing Verilog file "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\address_l1.v" into library work
+Parsing module <address_l1>.
+Analyzing Verilog file "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\vgaPulse.v" into library work
+Parsing module <vgaPulse>.
+Analyzing Verilog file "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\Top_convolution.v" into library work
+Parsing module <Top_convolution>.
+WARNING:HDLCompiler:751 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\Top_convolution.v" Line 75: Redeclaration of ansi port max_pl is not allowed
+Analyzing Verilog file "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\clockDiv.v" into library work
+Parsing module <clockDiv>.
+Analyzing Verilog file "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\vgaProject.v" into library work
+Parsing module <vgaProject>.
+Parsing VHDL file "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\ipcore_dir\Pattern_conv.vhd" into library work
+Parsing entity <Pattern_conv>.
+Parsing architecture <Pattern_conv_a> of entity <pattern_conv>.
+Parsing VHDL file "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\ipcore_dir\Image_conv.vhd" into library work
+Parsing entity <Image_conv>.
+Parsing architecture <Image_conv_a> of entity <image_conv>.
+Parsing VHDL file "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\ipcore_dir\maxpool_IP.vhd" into library work
+Parsing entity <maxpool_IP>.
+Parsing architecture <maxpool_IP_a> of entity <maxpool_ip>.
+Parsing VHDL file "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\ipcore_dir\Pattern.vhd" into library work
+Parsing entity <Pattern>.
+Parsing architecture <Pattern_a> of entity <pattern>.
+Parsing VHDL file "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\ipcore_dir\Image_doc.vhd" into library work
+Parsing entity <Image_doc>.
+Parsing architecture <Image_doc_a> of entity <image_doc>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <vgaProject>.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\vgaProject.v" Line 37: Result of 32-bit expression is truncated to fit in 13-bit target.
+
+Elaborating module <vgaPulse>.
+WARNING:HDLCompiler:1127 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\vgaPulse.v" Line 47: Assignment to S0 ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\vgaPulse.v" Line 63: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\vgaPulse.v" Line 67: Result of 14-bit expression is truncated to fit in 13-bit target.
+
+Elaborating module <clockDiv>.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\clockDiv.v" Line 36: Result of 31-bit expression is truncated to fit in 1-bit target.
+
+Elaborating module <Top_convolution>.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\Top_convolution.v" Line 62: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\Top_convolution.v" Line 68: Result of 32-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\Top_convolution.v" Line 71: Result of 32-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\Top_convolution.v" Line 114: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\Top_convolution.v" Line 115: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\Top_convolution.v" Line 116: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\Top_convolution.v" Line 117: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\Top_convolution.v" Line 120: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\Top_convolution.v" Line 124: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\Top_convolution.v" Line 125: Result of 32-bit expression is truncated to fit in 18-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\Top_convolution.v" Line 126: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\Top_convolution.v" Line 127: Result of 32-bit expression is truncated to fit in 18-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\Top_convolution.v" Line 129: Result of 32-bit expression is truncated to fit in 10-bit target.
+
+Elaborating module <Filter>.
+Going to vhdl side to elaborate module Pattern
+
+Elaborating entity <Pattern> (architecture <Pattern_a>) from library <work>.
+Back to verilog to continue elaboration
+WARNING:HDLCompiler:189 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\Top_convolution.v" Line 147: Size mismatch in connection of port <dina>. Formal port size is 8-bit while actual signal size is 7-bit.
+Going to vhdl side to elaborate module Image_doc
+
+Elaborating entity <Image_doc> (architecture <Image_doc_a>) from library <work>.
+Back to verilog to continue elaboration
+WARNING:HDLCompiler:189 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\Top_convolution.v" Line 156: Size mismatch in connection of port <dina>. Formal port size is 8-bit while actual signal size is 7-bit.
+Going to vhdl side to elaborate module Pattern_conv
+
+Elaborating entity <Pattern_conv> (architecture <Pattern_conv_a>) from library <work>.
+Back to verilog to continue elaboration
+Going to vhdl side to elaborate module Image_conv
+
+Elaborating entity <Image_conv> (architecture <Image_conv_a>) from library <work>.
+Back to verilog to continue elaboration
+Going to vhdl side to elaborate module maxpool_IP
+
+Elaborating entity <maxpool_IP> (architecture <maxpool_IP_a>) from library <work>.
+Back to verilog to continue elaboration
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\Top_convolution.v" Line 219: Result of 19-bit expression is truncated to fit in 18-bit target.
+
+Elaborating module <address_l1>.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\address_l1.v" Line 53: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\address_l1.v" Line 60: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\address_l1.v" Line 70: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\address_l1.v" Line 76: Result of 10-bit expression is truncated to fit in 9-bit target.
+
+Elaborating module <address_l2>.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\address_l2.v" Line 40: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\address_l2.v" Line 41: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\address_l2.v" Line 55: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\address_l2.v" Line 98: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\address_l2.v" Line 105: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\address_l2.v" Line 115: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\address_l2.v" Line 121: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\Top_convolution.v" Line 260: Result of 11-bit expression is truncated to fit in 10-bit target.
+
+Elaborating module <convolution>.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\convolution.v" Line 42: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\convolution.v" Line 67: Result of 27-bit expression is truncated to fit in 21-bit target.
+
+Elaborating module <maxpool>.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\maxpool.v" Line 39: Result of 8-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\maxpool.v" Line 39: Assignment to addr ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\maxpool.v" Line 41: Assignment to tempout ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\maxpool.v" Line 55: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:189 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\Top_convolution.v" Line 290: Size mismatch in connection of port <factor>. Formal port size is 4-bit while actual signal size is 9-bit.
+WARNING:HDLCompiler:189 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\vgaProject.v" Line 99: Size mismatch in connection of port <out>. Formal port size is 21-bit while actual signal size is 20-bit.
+WARNING:HDLCompiler:189 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\vgaProject.v" Line 100: Size mismatch in connection of port <max_pl>. Formal port size is 21-bit while actual signal size is 20-bit.
+WARNING:HDLCompiler:413 - "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\vgaProject.v" Line 113: Result of 14-bit expression is truncated to fit in 13-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <vgaProject>.
+    Related source file is "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\vgaProject.v".
+        idle = 4'b0000
+        conv = 4'b0001
+        calc_p1 = 4'b0010
+        calc_p2 = 4'b0011
+        read = 4'b0100
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <vga_pool>, simulation mismatch.
+    Found 5084x12-bit dual-port RAM <Mram_vga_pool> for signal <vga_pool>.
+    Found 13-bit register for signal <addr_wr>.
+    Found 1-bit register for signal <done>.
+    Found 4-bit register for signal <current_state>.
+    Found 1-bit register for signal <en_rd>.
+    Found 1-bit register for signal <en_cmp>.
+    Found 4-bit register for signal <next_state>.
+    Found 12-bit register for signal <vga>.
+    Found 13-bit register for signal <addr_rd>.
+    Found 12-bit subtractor for signal <GND_1_o_GND_1_o_sub_2_OUT> created at line 37.
+    Found 12-bit subtractor for signal <GND_1_o_GND_1_o_sub_4_OUT> created at line 37.
+    Found 32-bit adder for signal <n0066> created at line 37.
+    Found 13-bit adder for signal <addr_rd[12]_GND_1_o_add_7_OUT> created at line 113.
+    Found 20-bit adder for signal <n0096> created at line 126.
+    Found 32x6-bit multiplier for signal <n0075> created at line 37.
+    Found 4-bit 7-to-1 multiplexer for signal <_n0131> created at line 152.
+    Found 13-bit comparator greater for signal <addr_rd[12]_PWR_1_o_LessThan_7_o> created at line 112
+    Found 20-bit comparator lessequal for signal <threshold[19]_out_pl[19]_LessThan_18_o> created at line 130
+    Found 11-bit comparator greater for signal <x[10]_GND_1_o_LessThan_42_o> created at line 187
+    Found 11-bit comparator lessequal for signal <n0050> created at line 187
+    Found 11-bit comparator greater for signal <y[10]_GND_1_o_LessThan_44_o> created at line 187
+    Found 11-bit comparator lessequal for signal <n0055> created at line 187
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Multiplier(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred  49 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   7 Multiplexer(s).
+Unit <vgaProject> synthesized.
+
+Synthesizing Unit <vgaPulse>.
+    Related source file is "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\vgaPulse.v".
+    Found 1-bit register for signal <sp>.
+    Found 11-bit register for signal <posCount>.
+    Found 13-bit register for signal <count>.
+    Found 1-bit register for signal <free_reg>.
+    Found 11-bit adder for signal <posCount[10]_GND_3_o_add_17_OUT> created at line 63.
+    Found 13-bit adder for signal <count[12]_GND_3_o_add_19_OUT> created at line 67.
+    Found 22-bit comparator greater for signal <inc> created at line 48
+    Found 22-bit comparator greater for signal <stage1[21]_GND_3_o_LessThan_7_o> created at line 50
+    Found 22-bit comparator equal for signal <GND_3_o_stage1[21]_equal_8_o> created at line 50
+    Found 22-bit comparator greater for signal <GND_3_o_stage2[21]_LessThan_9_o> created at line 50
+    Found 22-bit comparator greater for signal <stage2[21]_GND_3_o_LessThan_10_o> created at line 51
+    Found 22-bit comparator equal for signal <GND_3_o_stage2[21]_equal_11_o> created at line 51
+    Found 22-bit comparator greater for signal <GND_3_o_stage3[21]_LessThan_12_o> created at line 51
+    Found 22-bit comparator greater for signal <stage3[21]_GND_3_o_LessThan_13_o> created at line 52
+    Found 22-bit comparator equal for signal <GND_3_o_stage3[21]_equal_14_o> created at line 52
+    Found 22-bit comparator greater for signal <GND_3_o_endStage[21]_LessThan_15_o> created at line 52
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+	inferred  10 Comparator(s).
+Unit <vgaPulse> synthesized.
+
+Synthesizing Unit <clockDiv>.
+    Related source file is "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\clockDiv.v".
+WARNING:Xst:647 - Input <div<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <div<31:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <out>.
+    Found 32-bit register for signal <count>.
+    Found 32-bit adder for signal <count[31]_GND_4_o_add_2_OUT> created at line 47.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+Unit <clockDiv> synthesized.
+
+Synthesizing Unit <Top_convolution>.
+    Related source file is "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\Top_convolution.v".
+        height_fil = 9'b000011110
+        width_fil = 9'b000011011
+        side_lap = 9'b000000011
+        height_filpro = 9'b000011100
+        width_filpro = 9'b000011001
+        height_image = 9'b110111000
+        width_image = 9'b101010100
+        height_impro = 9'b110110110
+        width_impro = 9'b101010010
+        factor = 9'b000000101
+        idle = 4'b0000
+        setup = 4'b0001
+        conv_p1 = 4'b0010
+        conv_p2 = 4'b0011
+        delay_p1 = 4'b0100
+        delay_p2 = 4'b0101
+        maxpl = 4'b0110
+        read = 4'b1111
+    Found 10-bit register for signal <ADDR_SM>.
+    Found 9-bit register for signal <HT_SM>.
+    Found 9-bit register for signal <WT_SM>.
+    Found 9-bit register for signal <HT_LG>.
+    Found 1-bit register for signal <en_conv>.
+    Found 1-bit register for signal <en_cnt_l1>.
+    Found 1-bit register for signal <en_cnt_l2>.
+    Found 1-bit register for signal <wr_ip>.
+    Found 1-bit register for signal <wr_fp>.
+    Found 1-bit register for signal <wr_pl>.
+    Found 1-bit register for signal <clear>.
+    Found 2-bit register for signal <conv_sel>.
+    Found 1-bit register for signal <done>.
+    Found 4-bit register for signal <current_state>.
+    Found 9-bit register for signal <WT_LG>.
+    Found 18-bit register for signal <ADDR_OUT>.
+    Found 19-bit subtractor for signal <GND_5_o_GND_5_o_sub_65_OUT> created at line 259.
+    Found 18-bit adder for signal <ADDR_OUT[17]_GND_5_o_add_58_OUT> created at line 219.
+    Found 10-bit adder for signal <ADDR_SM[9]_GND_5_o_add_66_OUT> created at line 260.
+    Found 9x9-bit multiplier for signal <ht_sm[8]_wt_sm[8]_MuLt_63_OUT> created at line 259.
+    Found 32-bit 4-to-1 multiplexer for signal <n0151> created at line 68.
+    Found 32-bit 4-to-1 multiplexer for signal <n0152> created at line 71.
+    Found 32-bit 4-to-1 multiplexer for signal <n0220> created at line 120.
+    Found 32-bit 4-to-1 multiplexer for signal <n0164> created at line 127.
+    Found 32-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_66_o> created at line 259
+    HDL ADVISOR - Describing an operational reset or an explicit power-up state for register <current_state> would allow inference of a finite state machine and as consequence better performance and smaller area.
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  78 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  46 Multiplexer(s).
+Unit <Top_convolution> synthesized.
+
+Synthesizing Unit <Filter>.
+    Related source file is "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\Filter.v".
+WARNING:Xst:2999 - Signal 'sobel', unconnected in block 'Filter', is tied to its initial value.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <sobel>, simulation mismatch.
+    Found 9x9-bit single-port Read Only RAM <Mram_sobel> for signal <sobel>.
+    Found 9-bit register for signal <out>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   9 D-type flip-flop(s).
+Unit <Filter> synthesized.
+
+Synthesizing Unit <address_l1>.
+    Related source file is "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\address_l1.v".
+    Found 9-bit register for signal <ADDRY>.
+    Found 9-bit register for signal <OFFSET_X>.
+    Found 9-bit register for signal <OFFSET_Y>.
+    Found 1-bit register for signal <conv_done>.
+    Found 9-bit register for signal <ADDRX>.
+    Found 10-bit subtractor for signal <GND_14_o_GND_14_o_sub_6_OUT> created at line 52.
+    Found 10-bit subtractor for signal <GND_14_o_GND_14_o_sub_9_OUT> created at line 59.
+    Found 19-bit subtractor for signal <GND_14_o_GND_14_o_sub_16_OUT> created at line 67.
+    Found 9-bit subtractor for signal <wt_lg[8]_wt_sm[8]_sub_18_OUT> created at line 69.
+    Found 9-bit subtractor for signal <ht_lg[8]_ht_sm[8]_sub_21_OUT> created at line 75.
+    Found 9-bit adder for signal <addrx> created at line 37.
+    Found 9-bit adder for signal <addry> created at line 38.
+    Found 18-bit adder for signal <address_lg> created at line 39.
+    Found 9-bit adder for signal <ADDRX[8]_GND_14_o_add_7_OUT> created at line 53.
+    Found 9-bit adder for signal <ADDRY[8]_GND_14_o_add_10_OUT> created at line 60.
+    Found 9-bit adder for signal <OFFSET_X[8]_GND_14_o_add_19_OUT> created at line 70.
+    Found 9-bit adder for signal <OFFSET_Y[8]_GND_14_o_add_22_OUT> created at line 76.
+    Found 9x9-bit multiplier for signal <n0114> created at line 39.
+    Found 9x9-bit multiplier for signal <ht_sm[8]_wt_sm[8]_MuLt_14_OUT> created at line 67.
+    Found 32-bit comparator greater for signal <GND_14_o_GND_14_o_LessThan_7_o> created at line 52
+    Found 32-bit comparator greater for signal <GND_14_o_GND_14_o_LessThan_10_o> created at line 59
+    Found 32-bit comparator equal for signal <GND_14_o_GND_14_o_equal_17_o> created at line 67
+    Found 9-bit comparator greater for signal <OFFSET_X[8]_wt_lg[8]_LessThan_19_o> created at line 69
+    Found 9-bit comparator greater for signal <OFFSET_Y[8]_ht_lg[8]_LessThan_22_o> created at line 75
+    Summary:
+	inferred   2 Multiplier(s).
+	inferred  12 Adder/Subtractor(s).
+	inferred  37 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+	inferred  10 Multiplexer(s).
+Unit <address_l1> synthesized.
+
+Synthesizing Unit <address_l2>.
+    Related source file is "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\address_l2.v".
+    Found 9-bit register for signal <ADDRX>.
+    Found 9-bit register for signal <ADDRY>.
+    Found 9-bit register for signal <OFFSET_X1>.
+    Found 9-bit register for signal <OFFSET_Y1>.
+    Found 9-bit register for signal <OFFSET_X2>.
+    Found 9-bit register for signal <OFFSET_Y2>.
+    Found 1-bit register for signal <conv_done>.
+    Found 10-bit register for signal <count2>.
+    Found 10-bit subtractor for signal <GND_16_o_GND_16_o_sub_21_OUT> created at line 97.
+    Found 10-bit subtractor for signal <GND_16_o_GND_16_o_sub_24_OUT> created at line 104.
+    Found 10-bit subtractor for signal <GND_16_o_GND_16_o_sub_41_OUT> created at line 129.
+    Found 10-bit subtractor for signal <GND_16_o_GND_16_o_sub_46_OUT> created at line 134.
+    Found 9-bit adder for signal <n0206> created at line 42.
+    Found 9-bit adder for signal <addrx> created at line 42.
+    Found 9-bit adder for signal <n0212> created at line 43.
+    Found 9-bit adder for signal <addry> created at line 43.
+    Found 18-bit adder for signal <address_lg> created at line 44.
+    Found 10-bit adder for signal <count2[9]_GND_16_o_add_13_OUT> created at line 55.
+    Found 9-bit adder for signal <ADDRX[8]_GND_16_o_add_22_OUT> created at line 98.
+    Found 9-bit adder for signal <ADDRY[8]_GND_16_o_add_25_OUT> created at line 105.
+    Found 9-bit adder for signal <OFFSET_X1[8]_GND_16_o_add_32_OUT> created at line 115.
+    Found 9-bit adder for signal <OFFSET_Y1[8]_GND_16_o_add_35_OUT> created at line 121.
+    Found 9-bit adder for signal <OFFSET_X2[8]_factor[8]_add_44_OUT> created at line 130.
+    Found 9-bit adder for signal <OFFSET_Y2[8]_factor[8]_add_49_OUT> created at line 135.
+    Found 10-bit subtractor for signal <limit1> created at line 38.
+    Found 10-bit subtractor for signal <limit2> created at line 39.
+    Found 32-bit subtractor for signal <GND_16_o_GND_16_o_add_47_OUT> created at line 134.
+    Found 32-bit subtractor for signal <GND_16_o_GND_16_o_add_42_OUT> created at line 129.
+    Found 9x9-bit multiplier for signal <ht_sm[8]_wt_sm[8]_MuLt_0_OUT> created at line 40.
+    Found 9x9-bit multiplier for signal <factor[8]_factor[8]_MuLt_2_OUT> created at line 41.
+    Found 9x9-bit multiplier for signal <n0216> created at line 44.
+    Found 10-bit comparator greater for signal <count2[9]_limit2[9]_LessThan_13_o> created at line 54
+    Found 32-bit comparator greater for signal <GND_16_o_GND_16_o_LessThan_22_o> created at line 97
+    Found 32-bit comparator greater for signal <GND_16_o_GND_16_o_LessThan_25_o> created at line 104
+    Found 10-bit comparator equal for signal <count1[9]_limit1[9]_equal_30_o> created at line 112
+    Found 32-bit comparator greater for signal <GND_16_o_GND_16_o_LessThan_32_o> created at line 114
+    Found 32-bit comparator greater for signal <GND_16_o_GND_16_o_LessThan_35_o> created at line 120
+    Found 10-bit comparator equal for signal <count2[9]_limit2[9]_equal_40_o> created at line 128
+    Found 32-bit comparator greater for signal <GND_16_o_GND_16_o_LessThan_44_o> created at line 129
+    Found 32-bit comparator greater for signal <GND_16_o_GND_16_o_LessThan_49_o> created at line 134
+    Summary:
+	inferred   3 Multiplier(s).
+	inferred  20 Adder/Subtractor(s).
+	inferred  65 D-type flip-flop(s).
+	inferred   9 Comparator(s).
+	inferred  21 Multiplexer(s).
+Unit <address_l2> synthesized.
+
+Synthesizing Unit <convolution>.
+    Related source file is "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\convolution.v".
+    Found 27-bit register for signal <data>.
+    Found 1-bit register for signal <done>.
+    Found 21-bit register for signal <out>.
+    Found 10-bit register for signal <counter>.
+    Found 10-bit adder for signal <counter[9]_GND_17_o_add_3_OUT> created at line 42.
+    Found 27-bit adder for signal <data[26]_in1[8]_add_12_OUT> created at line 58.
+    Found 9x9-bit multiplier for signal <n0037> created at line 57.
+    Found 9x9-bit multiplier for signal <in1[8]_in2[8]_MuLt_17_OUT> created at line 68.
+    Found 10-bit comparator greater for signal <counter[9]_height[8]_LessThan_11_o> created at line 57
+    Found 32-bit comparator greater for signal <data[26]_GND_17_o_LessThan_14_o> created at line 62
+    Found 32-bit comparator greater for signal <PWR_20_o_data[26]_LessThan_15_o> created at line 64
+    Summary:
+	inferred   2 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  59 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred   4 Multiplexer(s).
+Unit <convolution> synthesized.
+
+Synthesizing Unit <maxpool>.
+    Related source file is "C:\Users\abhij\Documents\MSCE_UMBC\Sem_2\CMPE-650\Project\Final\Final\maxpool.v".
+    Found 21-bit register for signal <abs_max>.
+    Found 8-bit register for signal <counter>.
+    Found 1-bit register for signal <done>.
+    Found 21-bit register for signal <out>.
+    Found 21-bit register for signal <cur_max>.
+    Found 8-bit adder for signal <counter[7]_GND_19_o_add_9_OUT> created at line 55.
+    Found 4x4-bit multiplier for signal <size> created at line 40.
+    Found 8-bit comparator greater for signal <counter[7]_size[7]_LessThan_9_o> created at line 54
+    Found 21-bit comparator greater for signal <in[20]_cur_max[20]_LessThan_11_o> created at line 56
+    Found 21-bit comparator greater for signal <in[20]_abs_max[20]_LessThan_16_o> created at line 66
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  72 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred   6 Multiplexer(s).
+Unit <maxpool> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 5084x12-bit dual-port RAM                             : 1
+ 9x9-bit single-port Read Only RAM                     : 1
+# Multipliers                                          : 10
+ 32x6-bit multiplier                                   : 1
+ 4x4-bit multiplier                                    : 1
+ 9x9-bit multiplier                                    : 8
+# Adders/Subtractors                                   : 48
+ 10-bit adder                                          : 3
+ 10-bit subtractor                                     : 8
+ 11-bit adder                                          : 2
+ 12-bit subtractor                                     : 2
+ 13-bit adder                                          : 3
+ 18-bit adder                                          : 3
+ 19-bit subtractor                                     : 2
+ 20-bit adder                                          : 1
+ 27-bit adder                                          : 1
+ 32-bit adder                                          : 2
+ 32-bit subtractor                                     : 2
+ 8-bit adder                                           : 1
+ 9-bit adder                                           : 16
+ 9-bit subtractor                                      : 2
+# Registers                                            : 57
+ 1-bit register                                        : 20
+ 10-bit register                                       : 3
+ 11-bit register                                       : 2
+ 12-bit register                                       : 1
+ 13-bit register                                       : 4
+ 18-bit register                                       : 1
+ 2-bit register                                        : 1
+ 21-bit register                                       : 4
+ 27-bit register                                       : 1
+ 32-bit register                                       : 1
+ 4-bit register                                        : 3
+ 8-bit register                                        : 1
+ 9-bit register                                        : 15
+# Comparators                                          : 47
+ 10-bit comparator equal                               : 2
+ 10-bit comparator greater                             : 2
+ 11-bit comparator greater                             : 2
+ 11-bit comparator lessequal                           : 2
+ 13-bit comparator greater                             : 1
+ 20-bit comparator lessequal                           : 1
+ 21-bit comparator greater                             : 2
+ 22-bit comparator equal                               : 6
+ 22-bit comparator greater                             : 14
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 11
+ 8-bit comparator greater                              : 1
+ 9-bit comparator greater                              : 2
+# Multiplexers                                         : 94
+ 1-bit 2-to-1 multiplexer                              : 25
+ 10-bit 2-to-1 multiplexer                             : 3
+ 13-bit 2-to-1 multiplexer                             : 2
+ 2-bit 2-to-1 multiplexer                              : 2
+ 21-bit 2-to-1 multiplexer                             : 7
+ 27-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 6
+ 32-bit 4-to-1 multiplexer                             : 4
+ 4-bit 2-to-1 multiplexer                              : 5
+ 4-bit 7-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 37
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/Pattern.ngc>.
+Reading core <ipcore_dir/Image_doc.ngc>.
+Reading core <ipcore_dir/Pattern_conv.ngc>.
+Reading core <ipcore_dir/Image_conv.ngc>.
+Reading core <ipcore_dir/maxpool_IP.ngc>.
+Loading core <Pattern> for timing and area information for instance <P>.
+Loading core <Image_doc> for timing and area information for instance <I>.
+Loading core <Pattern_conv> for timing and area information for instance <PC>.
+Loading core <Image_conv> for timing and area information for instance <IC>.
+Loading core <maxpool_IP> for timing and area information for instance <MPIP>.
+
+Synthesizing (advanced) Unit <Filter>.
+INFO:Xst:3231 - The small RAM <Mram_sobel> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 9-word x 9-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <Filter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Top_convolution>.
+The following registers are absorbed into counter <ADDR_SM>: 1 register on signal <ADDR_SM>.
+The following registers are absorbed into counter <ADDR_OUT>: 1 register on signal <ADDR_OUT>.
+	Multiplier <Mmult_ht_sm[8]_wt_sm[8]_MuLt_63_OUT> in block <Top_convolution> and adder/subtractor <Msub_GND_5_o_GND_5_o_sub_65_OUT> in block <Top_convolution> are combined into a MAC<Maddsub_ht_sm[8]_wt_sm[8]_MuLt_63_OUT>.
+Unit <Top_convolution> synthesized (advanced).
+
+Synthesizing (advanced) Unit <address_l1>.
+The following registers are absorbed into counter <OFFSET_X>: 1 register on signal <OFFSET_X>.
+The following registers are absorbed into counter <OFFSET_Y>: 1 register on signal <OFFSET_Y>.
+	Multiplier <Mmult_n0114> in block <address_l1> and adder/subtractor <Madd_address_lg> in block <address_l1> are combined into a MAC<Maddsub_n0114>.
+	Multiplier <Mmult_ht_sm[8]_wt_sm[8]_MuLt_14_OUT> in block <address_l1> and adder/subtractor <Msub_GND_14_o_GND_14_o_sub_16_OUT> in block <address_l1> are combined into a MAC<Maddsub_ht_sm[8]_wt_sm[8]_MuLt_14_OUT>.
+Unit <address_l1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <address_l2>.
+The following registers are absorbed into counter <count2>: 1 register on signal <count2>.
+	Multiplier <Mmult_n0216> in block <address_l2> and adder/subtractor <Madd_address_lg> in block <address_l2> are combined into a MAC<Maddsub_n0216>.
+	Multiplier <Mmult_ht_sm[8]_wt_sm[8]_MuLt_0_OUT> in block <address_l2> and adder/subtractor <Msub_limit1> in block <address_l2> are combined into a MAC<Maddsub_ht_sm[8]_wt_sm[8]_MuLt_0_OUT>.
+Unit <address_l2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clockDiv>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <clockDiv> synthesized (advanced).
+
+Synthesizing (advanced) Unit <convolution>.
+The following registers are absorbed into accumulator <data>: 1 register on signal <data>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+	Multiplier <Mmult_in1[8]_in2[8]_MuLt_17_OUT> in block <convolution> and accumulator <data> in block <convolution> are combined into a MAC<Mmac_in1[8]_in2[8]_MuLt_17_OUT>.
+Unit <convolution> synthesized (advanced).
+
+Synthesizing (advanced) Unit <maxpool>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <maxpool> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vgaProject>.
+The following registers are absorbed into counter <addr_rd>: 1 register on signal <addr_rd>.
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <addr_wr> prevents it from being combined with the RAM <Mram_vga_pool> for implementation as read-only block RAM.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 5084-word x 12-bit                  |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <N0_0>          | high     |
+    |     addrA          | connected to signal <(debug_addr<8:0>,addr_wr)> |          |
+    |     diA            | connected to signal <(threshold[19]_INV_113_o,threshold[19]_INV_113_o,threshold[19]_INV_113_o,threshold[19]_INV_113_o,threshold[19]_INV_113_o,threshold[19]_INV_113_o,threshold[19]_INV_113_o,threshold[19]_INV_113_o,threshold[19]_INV_113_o,threshold[19]_INV_113_o,threshold[19]_INV_113_o,threshold[19]_INV_113_o)> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 5084-word x 12-bit                  |          |
+    |     addrB          | connected to signal <n0066>         |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_vga_pool> will be implemented as a BLOCK RAM, absorbing the following register(s): <vga>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 5084-word x 12-bit                  |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <N0_0>          | high     |
+    |     addrA          | connected to signal <(debug_addr<8:0>,addr_wr)> |          |
+    |     diA            | connected to signal <(threshold[19]_INV_113_o,threshold[19]_INV_113_o,threshold[19]_INV_113_o,threshold[19]_INV_113_o,threshold[19]_INV_113_o,threshold[19]_INV_113_o,threshold[19]_INV_113_o,threshold[19]_INV_113_o,threshold[19]_INV_113_o,threshold[19]_INV_113_o,threshold[19]_INV_113_o,threshold[19]_INV_113_o)> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 5084-word x 12-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <n0066>         |          |
+    |     doB            | connected to signal <vga>           |          |
+    |     dorstB         | connected to internal node          | low      |
+    | reset value        | 000000000000                                   |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <vgaProject> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vgaPulse>.
+The following registers are absorbed into counter <posCount>: 1 register on signal <posCount>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <vgaPulse> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 5084x12-bit dual-port block RAM                       : 1
+ 9x9-bit single-port distributed Read Only RAM         : 1
+# MACs                                                 : 6
+ 9x9-to-10-bit MAC                                     : 1
+ 9x9-to-18-bit MAC                                     : 2
+ 9x9-to-19-bit MAC                                     : 2
+ 9x9-to-27-bit Loadable MAC                            : 1
+# Multipliers                                          : 4
+ 32x6-bit multiplier                                   : 1
+ 4x4-bit multiplier                                    : 2
+ 9x9-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 29
+ 10-bit subtractor                                     : 7
+ 12-bit subtractor                                     : 2
+ 13-bit adder                                          : 1
+ 20-bit adder                                          : 1
+ 32-bit subtractor                                     : 2
+ 9-bit adder                                           : 14
+ 9-bit subtractor                                      : 2
+# Counters                                             : 13
+ 10-bit up counter                                     : 3
+ 11-bit up counter                                     : 2
+ 13-bit up counter                                     : 3
+ 18-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+ 9-bit up counter                                      : 2
+# Registers                                            : 248
+ Flip-Flops                                            : 248
+# Comparators                                          : 47
+ 10-bit comparator equal                               : 2
+ 10-bit comparator greater                             : 2
+ 11-bit comparator greater                             : 2
+ 11-bit comparator lessequal                           : 2
+ 13-bit comparator greater                             : 1
+ 20-bit comparator lessequal                           : 1
+ 21-bit comparator greater                             : 2
+ 22-bit comparator equal                               : 6
+ 22-bit comparator greater                             : 14
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 11
+ 8-bit comparator greater                              : 1
+ 9-bit comparator greater                              : 2
+# Multiplexers                                         : 86
+ 1-bit 2-to-1 multiplexer                              : 25
+ 13-bit 2-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 2
+ 21-bit 2-to-1 multiplexer                             : 7
+ 32-bit 2-to-1 multiplexer                             : 6
+ 32-bit 4-to-1 multiplexer                             : 4
+ 4-bit 2-to-1 multiplexer                              : 5
+ 4-bit 7-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 35
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <Mmult_n00751> of sequential type is unconnected in block <vgaProject>.
+WARNING:Xst:1710 - FF/Latch <WT_LG_4> (without init value) has a constant value of 1 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <WT_LG_5> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <WT_LG_7> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <WT_LG_0> in Unit <Top_convolution> is equivalent to the following FF/Latch, which will be removed : <WT_LG_3> 
+INFO:Xst:2261 - The FF/Latch <WT_LG_6> in Unit <Top_convolution> is equivalent to the following FF/Latch, which will be removed : <WT_LG_8> 
+INFO:Xst:2261 - The FF/Latch <out_0> in Unit <Filter> is equivalent to the following 7 FFs/Latches, which will be removed : <out_1> <out_3> <out_4> <out_5> <out_6> <out_7> <out_8> 
+
+Optimizing unit <vgaProject> ...
+WARNING:Xst:1710 - FF/Latch <next_state_3> (without init value) has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <current_state_3> (without init value) has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Top_convolution> ...
+WARNING:Xst:1710 - FF/Latch <HT_SM_5> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <HT_SM_6> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <HT_SM_7> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <HT_SM_8> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <WT_SM_2> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <WT_SM_5> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <WT_SM_6> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <WT_SM_7> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <WT_SM_8> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <HT_LG_0> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <HT_LG_6> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <HT_SM_5> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <HT_SM_6> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <HT_SM_7> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <HT_SM_8> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <WT_SM_2> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <WT_SM_5> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <WT_SM_6> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <WT_SM_7> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <WT_SM_8> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <HT_LG_0> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <HT_LG_6> (without init value) has a constant value of 0 in block <Top_convolution>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <address_l1> ...
+
+Optimizing unit <address_l2> ...
+WARNING:Xst:1710 - FF/Latch <OFFSET_X1_8> (without init value) has a constant value of 0 in block <address_l2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OFFSET_Y1_8> (without init value) has a constant value of 0 in block <address_l2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <OFFSET_X1_3> (without init value) has a constant value of 0 in block <address_l2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OFFSET_X1_4> (without init value) has a constant value of 0 in block <address_l2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OFFSET_X1_5> (without init value) has a constant value of 0 in block <address_l2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OFFSET_X1_6> (without init value) has a constant value of 0 in block <address_l2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OFFSET_X1_7> (without init value) has a constant value of 0 in block <address_l2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OFFSET_X1_8> (without init value) has a constant value of 0 in block <address_l2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OFFSET_Y1_3> (without init value) has a constant value of 0 in block <address_l2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OFFSET_Y1_4> (without init value) has a constant value of 0 in block <address_l2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OFFSET_Y1_5> (without init value) has a constant value of 0 in block <address_l2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OFFSET_Y1_6> (without init value) has a constant value of 0 in block <address_l2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OFFSET_Y1_7> (without init value) has a constant value of 0 in block <address_l2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OFFSET_Y1_8> (without init value) has a constant value of 0 in block <address_l2>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <convolution> ...
+
+Optimizing unit <maxpool> ...
+
+Optimizing unit <vgaPulse> ...
+WARNING:Xst:1293 - FF/Latch <pixel/count_25> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_26> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_27> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_28> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_29> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_30> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_31> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Conv/addr_l1/ADDRY_8> (without init value) has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Conv/addr_l1/ADDRY_7> (without init value) has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Conv/addr_l1/ADDRY_6> (without init value) has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Conv/addr_l1/ADDRY_5> (without init value) has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Conv/addr_l2/count2_9> (without init value) has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Conv/addr_l2/count2_8> (without init value) has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Conv/addr_l2/count2_7> (without init value) has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Conv/addr_l2/count2_6> (without init value) has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Conv/addr_l2/count2_5> (without init value) has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Conv/addr_l2/ADDRY_8> (without init value) has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Conv/addr_l2/ADDRY_7> (without init value) has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Conv/addr_l2/ADDRY_6> (without init value) has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Conv/addr_l2/ADDRY_5> (without init value) has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Conv/maxpool/counter_7> (without init value) has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Conv/maxpool/counter_6> (without init value) has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Conv/maxpool/counter_5> (without init value) has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Conv/maxpool/abs_max_20> (without init value) has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_1> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_2> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_3> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_4> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_5> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_6> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_7> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_8> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_9> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_10> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_11> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_12> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_13> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_14> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_15> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_16> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_17> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_18> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_19> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_20> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_21> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_22> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_23> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel/count_24> has a constant value of 0 in block <vgaProject>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <Conv/WT_SM_4> in Unit <vgaProject> is equivalent to the following 4 FFs/Latches, which will be removed : <Conv/WT_SM_3> <Conv/HT_SM_4> <Conv/HT_SM_3> <Conv/HT_SM_2> 
+INFO:Xst:2261 - The FF/Latch <Conv/HT_LG_2> in Unit <vgaProject> is equivalent to the following FF/Latch, which will be removed : <Conv/HT_LG_1> 
+INFO:Xst:2261 - The FF/Latch <Conv/HT_LG_3> in Unit <vgaProject> is equivalent to the following 3 FFs/Latches, which will be removed : <Conv/WT_SM_1> <Conv/HT_SM_1> <Conv/HT_SM_0> 
+INFO:Xst:2261 - The FF/Latch <Conv/HT_LG_4> in Unit <vgaProject> is equivalent to the following FF/Latch, which will be removed : <Conv/WT_SM_0> 
+INFO:Xst:2261 - The FF/Latch <Conv/HT_LG_8> in Unit <vgaProject> is equivalent to the following 2 FFs/Latches, which will be removed : <Conv/HT_LG_7> <Conv/HT_LG_5> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2399 - RAMs <Mram_vga_pool3>, <Mram_vga_pool1> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Mram_vga_pool3>, <Mram_vga_pool2> are equivalent, second RAM is removed
+Found area constraint ratio of 100 (+ 5) on block vgaProject, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 319
+ Flip-Flops                                            : 319
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : vgaProject.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2005
+#      GND                         : 6
+#      INV                         : 61
+#      LUT1                        : 69
+#      LUT2                        : 212
+#      LUT3                        : 324
+#      LUT4                        : 269
+#      LUT5                        : 153
+#      LUT6                        : 195
+#      MUXCY                       : 463
+#      MUXF7                       : 15
+#      VCC                         : 4
+#      XORCY                       : 234
+# FlipFlops/Latches                : 335
+#      FD                          : 21
+#      FD_1                        : 4
+#      FDE                         : 109
+#      FDR                         : 53
+#      FDRE                        : 147
+#      FDS                         : 1
+# RAMS                             : 93
+#      RAMB18E1                    : 9
+#      RAMB36E1                    : 84
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 29
+#      IBUF                        : 2
+#      OBUF                        : 27
+# DSPs                             : 8
+#      DSP48E1                     : 8
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             335  out of  126800     0%  
+ Number of Slice LUTs:                 1283  out of  63400     2%  
+    Number used as Logic:              1283  out of  63400     2%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1373
+   Number with an unused Flip Flop:    1038  out of   1373    75%  
+   Number with an unused LUT:            90  out of   1373     6%  
+   Number of fully used LUT-FF pairs:   245  out of   1373    17%  
+   Number of unique control sets:        38
+
+IO Utilization: 
+ Number of IOs:                          30
+ Number of bonded IOBs:                  30  out of    210    14%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               89  out of    135    65%  
+    Number using Block RAM only:         89
+ Number of BUFG/BUFGCTRLs:                3  out of     32     9%  
+ Number of DSP48E1s:                      8  out of    240     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 383   |
+Horizontal/sp                      | BUFG                   | 26    |
+pixel/out                          | BUFG                   | 26    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                                                                                                                                     | Buffer(FF name)                                                                                                                                    | Load  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux_1212(Conv/IC/XST_GND:G)                                                                                                                                                        | NONE(Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)   | 80    |
+Conv/I/N1(Conv/I/XST_GND:G)                                                                                                                                                                                                                                                        | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B)   | 42    |
+Conv/MPIP/N1(Conv/MPIP/XST_GND:G)                                                                                                                                                                                                                                                  | NONE(Conv/MPIP/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)  | 4     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/cascadelata_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)      | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)   | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/cascadelatb_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)      | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)   | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_init.ram/cascadelata_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)    | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)  | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_init.ram/cascadelatb_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)    | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)  | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v6_init.ram/cascadelata_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)    | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)  | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v6_init.ram/cascadelatb_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)    | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)  | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_init.ram/cascadelata_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)    | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)  | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_init.ram/cascadelatb_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)    | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)  | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_init.ram/cascadelata_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)    | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)  | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_init.ram/cascadelatb_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)    | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)  | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_init.ram/cascadelata_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)    | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)  | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_init.ram/cascadelatb_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)    | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)  | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/v6_init.ram/cascadelata_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)    | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)  | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/v6_init.ram/cascadelatb_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)    | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)  | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/v6_init.ram/cascadelata_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)    | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)  | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/v6_init.ram/cascadelatb_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)    | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)  | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/v6_init.ram/cascadelata_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)    | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)  | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/v6_init.ram/cascadelatb_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)    | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)  | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/cascadelata_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)      | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)   | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/cascadelatb_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)      | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)   | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/v6_init.ram/cascadelata_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)    | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)  | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/v6_init.ram/cascadelatb_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)    | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)  | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_init.ram/cascadelata_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)      | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)   | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_init.ram/cascadelatb_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)      | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)   | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_init.ram/cascadelata_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)      | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)   | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_init.ram/cascadelatb_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)      | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)   | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/cascadelata_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)      | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)   | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/cascadelatb_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)      | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)   | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_init.ram/cascadelata_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)      | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)   | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_init.ram/cascadelatb_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)      | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)   | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_init.ram/cascadelata_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)      | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)   | 1     |
+Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_init.ram/cascadelatb_tmp(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)      | NONE(Conv/I/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)   | 1     |
+Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/cascadelata_tmp(Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/cascadelatb_tmp(Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/cascadelata_tmp(Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/cascadelatb_tmp(Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/cascadelata_tmp(Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/cascadelatb_tmp(Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/cascadelata_tmp(Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/cascadelatb_tmp(Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 10.172ns (Maximum Frequency: 98.312MHz)
+   Minimum input arrival time before clock: 2.343ns
+   Maximum output required time after clock: 0.917ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 10.172ns (frequency: 98.312MHz)
+  Total number of paths / destination ports: 242736 / 1316
+-------------------------------------------------------------------------
+Delay:               10.172ns (Levels of Logic = 15)
+  Source:            Conv/addr_l2/OFFSET_Y1_0 (FF)
+  Destination:       Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[43].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM18.ram (RAM)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Conv/addr_l2/OFFSET_Y1_0 to Conv/IC/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[43].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM18.ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.478   0.743  Conv/addr_l2/OFFSET_Y1_0 (Conv/addr_l2/OFFSET_Y1_0)
+     LUT3:I0->O            1   0.124   0.421  Conv/addr_l2/Madd_addry (Conv/addr_l2/Madd_addry)
+     LUT4:I3->O            1   0.124   0.000  Conv/addr_l2/Madd_addry_lut<0>1 (Conv/addr_l2/Madd_addry_lut<0>1)
+     MUXCY:S->O            1   0.472   0.000  Conv/addr_l2/Madd_addry_cy<0>_0 (Conv/addr_l2/Madd_addry_cy<0>1)
+     MUXCY:CI->O           1   0.029   0.000  Conv/addr_l2/Madd_addry_cy<0>_1 (Conv/addr_l2/Madd_addry_cy<0>2)
+     MUXCY:CI->O           1   0.029   0.000  Conv/addr_l2/Madd_addry_cy<0>_2 (Conv/addr_l2/Madd_addry_cy<0>3)
+     MUXCY:CI->O           1   0.029   0.000  Conv/addr_l2/Madd_addry_cy<0>_3 (Conv/addr_l2/Madd_addry_cy<0>4)
+     MUXCY:CI->O           1   0.029   0.000  Conv/addr_l2/Madd_addry_cy<0>_4 (Conv/addr_l2/Madd_addry_cy<0>5)
+     MUXCY:CI->O           1   0.029   0.000  Conv/addr_l2/Madd_addry_cy<0>_5 (Conv/addr_l2/Madd_addry_cy<0>6)
+     MUXCY:CI->O           0   0.029   0.000  Conv/addr_l2/Madd_addry_cy<0>_6 (Conv/addr_l2/Madd_addry_cy<0>7)
+     XORCY:CI->O           1   0.510   0.399  Conv/addr_l2/Madd_addry_xor<0>_7 (Conv/addr_l2/addry<8>)
+     DSP48E1:B8->P15       1   3.656   0.421  Conv/addr_l2/Maddsub_n0216 (Conv/addr_lg_l2<15>)
+     LUT4:I3->O           44   0.124   0.871  Conv/Mmux_n016471 (Conv/n0164<15>)
+     begin scope: 'Conv/IC:addra<15>'
+     LUT4:I1->O            5   0.124   0.563  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/Mmux_ENOUT<72>111 (U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/Mmux_ENOUT<72>11)
+     LUT5:I3->O            1   0.124   0.399  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/Mmux_ENOUT<72>12 (U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ena_array<72>)
+     RAMB18E1:ENARDEN          0.443          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[43].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM18.ram
+    ----------------------------------------
+    Total                     10.172ns (6.354ns logic, 3.817ns route)
+                                       (62.5% logic, 37.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Horizontal/sp'
+  Clock period: 7.990ns (frequency: 125.156MHz)
+  Total number of paths / destination ports: 613 / 50
+-------------------------------------------------------------------------
+Delay:               3.995ns (Levels of Logic = 8)
+  Source:            Vertical/count_8 (FF)
+  Destination:       Vertical/sp (FF)
+  Source Clock:      Horizontal/sp rising
+  Destination Clock: Horizontal/sp falling
+
+  Data Path: Vertical/count_8 to Vertical/sp
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             14   0.478   0.861  Vertical/count_8 (Vertical/count_8)
+     LUT4:I0->O            1   0.124   0.000  Vertical/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_lut<4> (Vertical/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_lut<4>)
+     MUXCY:S->O            1   0.472   0.000  Vertical/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<4> (Vertical/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  Vertical/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<5> (Vertical/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<5>)
+     MUXCY:CI->O           1   0.029   0.000  Vertical/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<6> (Vertical/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<6>)
+     MUXCY:CI->O           1   0.029   0.000  Vertical/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<7> (Vertical/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<7>)
+     MUXCY:CI->O           1   0.334   0.939  Vertical/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<8> (Vertical/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<8>)
+     LUT6:I0->O            1   0.124   0.421  Vertical/S1_S3_OR_48_o_SW0 (N36)
+     LUT4:I3->O            1   0.124   0.000  Vertical/S1_S3_OR_48_o (Vertical/S1_S3_OR_48_o)
+     FD_1:D                    0.030          Vertical/sp
+    ----------------------------------------
+    Total                      3.995ns (1.774ns logic, 2.221ns route)
+                                       (44.4% logic, 55.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'pixel/out'
+  Clock period: 8.107ns (frequency: 123.350MHz)
+  Total number of paths / destination ports: 588 / 50
+-------------------------------------------------------------------------
+Delay:               4.054ns (Levels of Logic = 10)
+  Source:            Horizontal/count_4 (FF)
+  Destination:       Horizontal/sp (FF)
+  Source Clock:      pixel/out rising
+  Destination Clock: pixel/out falling
+
+  Data Path: Horizontal/count_4 to Horizontal/sp
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             14   0.478   0.861  Horizontal/count_4 (Horizontal/count_4)
+     LUT4:I0->O            1   0.124   0.000  Horizontal/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_lut<2> (Horizontal/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_lut<2>)
+     MUXCY:S->O            1   0.472   0.000  Horizontal/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<2> (Horizontal/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  Horizontal/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<3> (Horizontal/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  Horizontal/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<4> (Horizontal/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  Horizontal/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<5> (Horizontal/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<5>)
+     MUXCY:CI->O           1   0.029   0.000  Horizontal/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<6> (Horizontal/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<6>)
+     MUXCY:CI->O           1   0.029   0.000  Horizontal/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<7> (Horizontal/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<7>)
+     MUXCY:CI->O           1   0.334   0.939  Horizontal/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<8> (Horizontal/Mcompar_stage3[21]_GND_3_o_LessThan_13_o_cy<8>)
+     LUT6:I0->O            1   0.124   0.421  Horizontal/S1_S3_OR_48_o_SW0 (N38)
+     LUT4:I3->O            1   0.124   0.000  Horizontal/S1_S3_OR_48_o (Horizontal/S1_S3_OR_48_o)
+     FD_1:D                    0.030          Horizontal/sp
+    ----------------------------------------
+    Total                      4.054ns (1.832ns logic, 2.221ns route)
+                                       (45.2% logic, 54.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 292 / 289
+-------------------------------------------------------------------------
+Offset:              2.343ns (Levels of Logic = 4)
+  Source:            rst (PAD)
+  Destination:       Conv/en_cnt_l1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to Conv/en_cnt_l1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            62   0.001   0.580  rst_IBUF (rst_IBUF)
+     LUT2:I1->O            1   0.124   0.939  Conv/current_state[3]_en_cnt_l1_Select_117_o1 (Conv/current_state[3]_en_cnt_l1_Select_117_o1)
+     LUT6:I0->O            1   0.124   0.421  Conv/current_state[3]_en_cnt_l1_Select_117_o2 (Conv/current_state[3]_en_cnt_l1_Select_117_o2)
+     LUT6:I5->O            1   0.124   0.000  Conv/current_state[3]_en_cnt_l1_Select_117_o3 (Conv/current_state[3]_en_cnt_l1_Select_117_o)
+     FD:D                      0.030          Conv/en_cnt_l1
+    ----------------------------------------
+    Total                      2.343ns (0.403ns logic, 1.940ns route)
+                                       (17.2% logic, 82.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              0.917ns (Levels of Logic = 1)
+  Source:            done_cmp (FF)
+  Destination:       done (PAD)
+  Source Clock:      clk rising
+
+  Data Path: done_cmp to done
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              7   0.478   0.439  done_cmp (done_cmp)
+     OBUF:I->O                 0.000          done_OBUF (done)
+    ----------------------------------------
+    Total                      0.917ns (0.478ns logic, 0.439ns route)
+                                       (52.1% logic, 47.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Horizontal/sp'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.889ns (Levels of Logic = 1)
+  Source:            Vertical/free_reg (FF)
+  Destination:       vFree (PAD)
+  Source Clock:      Horizontal/sp falling
+
+  Data Path: Vertical/free_reg to vFree
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             2   0.484   0.405  Vertical/free_reg (Vertical/free_reg)
+     OBUF:I->O                 0.000          vFree_OBUF (vFree)
+    ----------------------------------------
+    Total                      0.889ns (0.484ns logic, 0.405ns route)
+                                       (54.4% logic, 45.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'pixel/out'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.889ns (Levels of Logic = 1)
+  Source:            Horizontal/free_reg (FF)
+  Destination:       hFree (PAD)
+  Source Clock:      pixel/out falling
+
+  Data Path: Horizontal/free_reg to hFree
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             2   0.484   0.405  Horizontal/free_reg (Horizontal/free_reg)
+     OBUF:I->O                 0.000          hFree_OBUF (hFree)
+    ----------------------------------------
+    Total                      0.889ns (0.484ns logic, 0.405ns route)
+                                       (54.4% logic, 45.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Horizontal/sp
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Horizontal/sp  |    3.992|    1.994|    3.995|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   10.172|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock pixel/out
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pixel/out      |    3.933|    1.994|    4.054|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 39.00 secs
+Total CPU time to Xst completion: 38.81 secs
+ 
+--> 
+
+Total memory usage is 473844 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  139 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
+

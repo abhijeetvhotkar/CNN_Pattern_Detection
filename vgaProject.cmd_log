@@ -1,0 +1,69 @@
+xst -intstyle ise -ifn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.xst" -ofn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc7a100t-csg324-1 vgaProject.ngc vgaProject.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vgaProject_map.ncd vgaProject.ngd vgaProject.pcf 
+par -w -intstyle ise -ol high -mt off vgaProject_map.ncd vgaProject.ncd vgaProject.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml vgaProject.twx vgaProject.ncd -o vgaProject.twr vgaProject.pcf 
+bitgen -intstyle ise -f vgaProject.ut vgaProject.ncd 
+xst -intstyle ise -ifn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.xst" -ofn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.syr" 
+xst -intstyle ise -ifn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.xst" -ofn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc7a100t-csg324-1 vgaProject.ngc vgaProject.ngd  
+xst -intstyle ise -ifn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.xst" -ofn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vgaProject.ucf -p xc7a100t-csg324-1 vgaProject.ngc vgaProject.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vgaProject_map.ncd vgaProject.ngd vgaProject.pcf 
+par -w -intstyle ise -ol high -mt off vgaProject_map.ncd vgaProject.ncd vgaProject.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml vgaProject.twx vgaProject.ncd -o vgaProject.twr vgaProject.pcf -ucf vgaProject.ucf 
+bitgen -intstyle ise -f vgaProject.ut vgaProject.ncd 
+xst -intstyle ise -ifn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.xst" -ofn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vgaProject.ucf -p xc7a100t-csg324-1 vgaProject.ngc vgaProject.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vgaProject_map.ncd vgaProject.ngd vgaProject.pcf 
+par -w -intstyle ise -ol high -mt off vgaProject_map.ncd vgaProject.ncd vgaProject.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml vgaProject.twx vgaProject.ncd -o vgaProject.twr vgaProject.pcf -ucf vgaProject.ucf 
+bitgen -intstyle ise -f vgaProject.ut vgaProject.ncd 
+xst -intstyle ise -ifn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.xst" -ofn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vgaProject.ucf -p xc7a100t-csg324-1 vgaProject.ngc vgaProject.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vgaProject_map.ncd vgaProject.ngd vgaProject.pcf 
+par -w -intstyle ise -ol high -mt off vgaProject_map.ncd vgaProject.ncd vgaProject.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml vgaProject.twx vgaProject.ncd -o vgaProject.twr vgaProject.pcf -ucf vgaProject.ucf 
+bitgen -intstyle ise -f vgaProject.ut vgaProject.ncd 
+xst -intstyle ise -ifn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.xst" -ofn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vgaProject.ucf -p xc7a100t-csg324-1 vgaProject.ngc vgaProject.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vgaProject_map.ncd vgaProject.ngd vgaProject.pcf 
+par -w -intstyle ise -ol high -mt off vgaProject_map.ncd vgaProject.ncd vgaProject.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml vgaProject.twx vgaProject.ncd -o vgaProject.twr vgaProject.pcf -ucf vgaProject.ucf 
+bitgen -intstyle ise -f vgaProject.ut vgaProject.ncd 
+xst -intstyle ise -ifn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.xst" -ofn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vgaProject.ucf -p xc7a100t-csg324-1 vgaProject.ngc vgaProject.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vgaProject_map.ncd vgaProject.ngd vgaProject.pcf 
+par -w -intstyle ise -ol high -mt off vgaProject_map.ncd vgaProject.ncd vgaProject.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml vgaProject.twx vgaProject.ncd -o vgaProject.twr vgaProject.pcf -ucf vgaProject.ucf 
+bitgen -intstyle ise -f vgaProject.ut vgaProject.ncd 
+xst -intstyle ise -ifn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.xst" -ofn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vgaProject.ucf -p xc7a100t-csg324-1 vgaProject.ngc vgaProject.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vgaProject_map.ncd vgaProject.ngd vgaProject.pcf 
+par -w -intstyle ise -ol high -mt off vgaProject_map.ncd vgaProject.ncd vgaProject.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml vgaProject.twx vgaProject.ncd -o vgaProject.twr vgaProject.pcf -ucf vgaProject.ucf 
+bitgen -intstyle ise -f vgaProject.ut vgaProject.ncd 
+xst -intstyle ise -ifn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.xst" -ofn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vgaProject.ucf -p xc7a100t-csg324-1 vgaProject.ngc vgaProject.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vgaProject_map.ncd vgaProject.ngd vgaProject.pcf 
+par -w -intstyle ise -ol high -mt off vgaProject_map.ncd vgaProject.ncd vgaProject.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml vgaProject.twx vgaProject.ncd -o vgaProject.twr vgaProject.pcf -ucf vgaProject.ucf 
+bitgen -intstyle ise -f vgaProject.ut vgaProject.ncd 
+xst -intstyle ise -ifn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.xst" -ofn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vgaProject.ucf -p xc7a100t-csg324-1 vgaProject.ngc vgaProject.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vgaProject_map.ncd vgaProject.ngd vgaProject.pcf 
+par -w -intstyle ise -ol high -mt off vgaProject_map.ncd vgaProject.ncd vgaProject.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml vgaProject.twx vgaProject.ncd -o vgaProject.twr vgaProject.pcf -ucf vgaProject.ucf 
+bitgen -intstyle ise -f vgaProject.ut vgaProject.ncd 
+xst -intstyle ise -ifn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.xst" -ofn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vgaProject.ucf -p xc7a100t-csg324-1 vgaProject.ngc vgaProject.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vgaProject_map.ncd vgaProject.ngd vgaProject.pcf 
+par -w -intstyle ise -ol high -mt off vgaProject_map.ncd vgaProject.ncd vgaProject.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml vgaProject.twx vgaProject.ncd -o vgaProject.twr vgaProject.pcf -ucf vgaProject.ucf 
+bitgen -intstyle ise -f vgaProject.ut vgaProject.ncd 
+xst -intstyle ise -ifn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.xst" -ofn "C:/Users/abhij/Documents/MSCE_UMBC/Sem_2/CMPE-650/Project/Final/Final/vgaProject.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vgaProject.ucf -p xc7a100t-csg324-1 vgaProject.ngc vgaProject.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o vgaProject_map.ncd vgaProject.ngd vgaProject.pcf 
+par -w -intstyle ise -ol high -mt off vgaProject_map.ncd vgaProject.ncd vgaProject.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml vgaProject.twx vgaProject.ncd -o vgaProject.twr vgaProject.pcf -ucf vgaProject.ucf 
+bitgen -intstyle ise -f vgaProject.ut vgaProject.ncd 
